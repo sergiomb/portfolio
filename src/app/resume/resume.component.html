@@ -1,0 +1,22 @@
+
+<app-tool-bar></app-tool-bar>
+<section class="landing-intro landing-bg pt-5 pt-lg-6 pb-1">
+  <div class="container">
+    <!-- Spinner Row -->
+    <div class="row justify-content-center align-items-center" style="min-height: 100px;" *ngIf="spinner">
+      <div class="col-auto">
+        <div class="spinner-border mt-3" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+    </div>
+    <!-- Iframe Row -->
+    <div class="row landing-intro-content">
+      <div class="col">
+        <iframe style="width: 1000px;height:1500px; " [src]="safeIframeUrl" (load)="onIframeLoad()"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-latest-projects></app-latest-projects>

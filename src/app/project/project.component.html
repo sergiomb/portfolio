@@ -1,0 +1,102 @@
+<app-tool-bar></app-tool-bar>
+<section class="landing-intro landing-bg pt-5 pt-lg-6 pb-5 pb-lg-7 intro">
+  <div class="container" *ngIf="id === 'melispot'">
+    <h2 class="font-weight-bold mt-4" style="font-size: 2.3rem;">Melispot Analytics</h2>
+    <a class="nav-link" href="https://melispot.com.br" target="_blank">melispot.com.br</a>
+
+    <div class="row align-items-center">
+
+      <!-- Text Content -->
+      <div class="col-lg-5 mx-auto">
+        <p class="text-lg">Melispot is an analytics tool developed for Mercadolivre sellers, offering real-time information on sales performance. It helps sellers keep track of important metrics like revenue in different categories, top-selling and underperforming products, and the results of changes in product descriptions or prices. </p>
+        <p class="text-lg">Easy to integrate through OAuth, Melispot provides practical data that sellers can use to understand market trends and improve their sales tactics.</p>
+      </div>
+
+      <!-- Image Content -->
+      <div class="col-lg-7 mx-auto text-center">
+        <div class=" pb-3">
+          <img class="imageL" src="assets/images/homegraph.png" alt="Melispot Analytics Dashboard" />
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="container" *ngIf="id === 'wunderphish'">
+    <h2 class="font-weight-bold mt-4" style="font-size: 2.3rem;">Self-Service Phishing Simulations Platform</h2>
+    <a class="nav-link" href="https://wunderdigital.com.br" target="_blank">wunderdigital.com.br</a>
+
+    <div class="row align-items-center">
+
+      <!-- Text Content -->
+      <div class="col-lg-5 mx-auto">
+        <p class="text-lg">Wunder Cyber is a cutting-edge self-service platform designed to enhance cybersecurity awareness. It enables clients to effortlessly set up phishing simulations, leveraging customizable email templates.</p>
+        <p class="text-lg">The platform provides insightful dashboards to track key metrics such as email sends, opens, clicks, and instances of sensitive data entry, thereby measuring human risk vulnerability.</p>
+      </div>
+
+      <!-- Image Content -->
+      <div class="col-lg-7 mx-auto text-center">
+        <div class=" pb-3">
+          <img class="imageL" src="assets/images/wundercyber.png" style="width: 300px" alt="Melispot Analytics Dashboard" />
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container" *ngIf="id === 'microlearning'">
+    <h2 class="font-weight-bold mt-4" style="font-size: 2.3rem;">Wunder Digital - Microlearning</h2>
+    <a class="nav-link" href="https://wunderdigital.com.br" target="_blank">wunderdigital.com.br</a>
+
+    <div class="row align-items-center">
+
+      <!-- Text Content -->
+      <div class="col-lg-5 mx-auto">
+        <p class="text-lg">Wunder microlearning was the first product launched at Wunder Digital. It is a mobile-first e-learning platform tailored for large, distributed teams. It provides real-time analytics to monitor how users engage with the content and how they progress.</p>
+        <p class="text-lg">My role in this project was integral, I was responsible for designing the architecture and developing the serverless backend.</p>
+        <p class="text-lg">Additionally, I crafted the web interface using Angular and built the Android app with Java and Kotlin. For the iOS application, I hired an external resource.</p>
+
+      </div>
+
+      <!-- Image Content -->
+      <div class="col-lg-7 mx-auto text-center">
+        <div class=" pb-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <img class="imageL" src="assets/images/screen-duo-app-store.png" style="width: 200px" alt="Melispot Analytics Dashboard" />
+                    </div>
+                    <div class="col">
+                        <img class="imageL" src="assets/images/wunderdigital.png" style="width: 400px" alt="Melispot Analytics Dashboard" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+  </div>
+</section>
+
+<section class="bg-white">
+  <div class="container">
+    <!-- Spinner Row -->
+    <div class="row justify-content-center align-items-center" style="min-height: 100px;" *ngIf="spinner">
+      <div class="col-auto">
+        <div class="spinner-border mt-3" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+    </div>
+    <!-- Iframe Row -->
+    <div class="row landing-intro-content">
+      <div class="col">
+        <iframe *ngIf="id === 'melispot'" style="width: 1000px;height:3250px; " [src]="safeIframeUrl" (load)="onIframeLoad()"></iframe>
+        <iframe *ngIf="id === 'wunderphish'" style="width: 1000px;height:3900px; " [src]="safeIframeUrl" (load)="onIframeLoad()"></iframe>
+        <iframe *ngIf="id === 'microlearning'" style="width: 1000px;height:3000px; " [src]="safeIframeUrl" (load)="onIframeLoad()"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-latest-projects></app-latest-projects>

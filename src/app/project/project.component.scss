@@ -1,0 +1,30 @@
+.full-width-iframe {
+  width: 1000px;
+  height: 2500px; /* Example height, adjust as needed */
+}
+.intro {
+  padding-bottom: 30px !important;
+}
+
+.desc {
+  margin-top: -100px;
+}
+
+.imageL {
+  width: 500px;
+}
+.nav-link:hover {
+  text-decoration: underline;
+}
+.content-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+}
+
+.landing-intro-content {
+  width: 100%; /* Full width */
+}
+
+.landing-intro-content.loaded {
+  display: block;
+}
